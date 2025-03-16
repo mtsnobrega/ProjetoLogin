@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ProjetoLogin</string>
+    <string name="user_email">Email Vagabundo</string>
+    <string name="user_email_hint">Digite seu Email</string>
+    <string name="user_passwd">Senha Vagabundo</string>
+    <string name="user_passwd_hint">Digite sua Senha</string>
+    <string name="login">Login</string>
+    <string name="login_google">Sign in With Google</string>
+    <string name="nome_home">BookNotes</string>
+
+</resources>

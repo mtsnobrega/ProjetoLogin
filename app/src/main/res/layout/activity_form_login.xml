@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".FormLogin">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="400dp"
+        android:layout_height="300dp"
+        android:src="@drawable/foto_matheus"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="20dp"
+        />
+
+    <View
+        android:id="@+id/ConteinerComponenetes"
+        style="@style/ConteinerComponentes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo">
+
+    </View>
+
+    <TextView
+        android:id="@+id/ConteinerItensTextLogin1"
+        style="@style/ConteinerItensTexto"
+        android:text="@string/user_email"
+        app:layout_constraintStart_toStartOf="@id/ConteinerComponenetes"
+        app:layout_constraintEnd_toEndOf="@id/ConteinerComponenetes"
+        app:layout_constraintTop_toTopOf="@id/ConteinerComponenetes"/>
+
+    <EditText
+        android:id="@+id/ConteinerItensLogin"
+        style="@style/ConteinerItensLogin"
+        android:hint="@string/user_email_hint"
+        android:drawableRight="@drawable/ic_email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintStart_toStartOf="@id/ConteinerComponenetes"
+        app:layout_constraintEnd_toEndOf="@id/ConteinerComponenetes"
+        app:layout_constraintTop_toBottomOf="@id/ConteinerItensTextLogin1"/>
+
+
+    <TextView
+        android:id="@+id/ConteinerItensTextLogin2"
+        style="@style/ConteinerItensTexto"
+        android:text="@string/user_passwd"
+        app:layout_constraintStart_toStartOf="@id/ConteinerComponenetes"
+        app:layout_constraintEnd_toEndOf="@id/ConteinerComponenetes"
+        app:layout_constraintTop_toBottomOf="@id/ConteinerItensLogin"/>
+
+    <EditText
+        android:id="@+id/ConteinerItensSenha"
+        style="@style/ConteinerItensLogin"
+        android:hint="@string/user_passwd_hint"
+        android:inputType="textPassword"
+        android:drawableRight="@drawable/ic_olhinho"
+        app:layout_constraintStart_toStartOf="@id/ConteinerComponenetes"
+        app:layout_constraintEnd_toEndOf="@id/ConteinerComponenetes"
+        app:layout_constraintTop_toBottomOf="@id/ConteinerItensTextLogin2"/>
+
+    <ProgressBar
+        android:id="@+id/circulo_progresso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ConteinerComponenetes"
+        android:visibility="invisible"/>
+
+
+    <LinearLayout
+        android:id="@+id/ConteinerComponenetesButtonLogin"
+        style="@style/ConteinerComponentesButtonLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/circulo_progresso">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn1"
+            style="@style/buttom"
+            android:paddingRight="10dp"
+            android:drawableRight="@drawable/ic_google"
+            android:text="@string/login_google"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn2"
+            style="@style/buttom"
+            android:text="@string/login"/>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
