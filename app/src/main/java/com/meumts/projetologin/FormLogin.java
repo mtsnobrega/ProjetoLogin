@@ -1,41 +1,52 @@
 package com.meumts.projetologin;
 
 import android.os.Bundle;
-
-import androidx.activity.EdgeToEdge;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+import android.widget.EditText;
+import android.widget.Toast;
 import android.content.Intent;
 import android.view.View;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
+import androidx.core.content.ContextCompat;
+import android.os.Build;
 
 public class FormLogin extends AppCompatActivity {
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_form_login);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.login), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
 
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            // Altera a cor da status bar para a cor definida em colors.xml
+            getWindow().setStatusBarColor(ContextCompat.getColor(this, R.color.black));
+        }
+
+
+        // Referências diretas para os EditText
+        EditText loginEdit = findViewById(R.id.ConteinerItensLogin);
+        EditText senhaEdit = findViewById(R.id.ConteinerItensSenha);
         AppCompatButton loginButton = findViewById(R.id.btn2);
 
-        // Configurar o listener de clique do botão
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Criar um Intent para iniciar a FormHome
-                Intent intent = new Intent(FormLogin.this, FormHome.class);
-                startActivity(intent);
+                // Captura dos textos digitados
+                String login = loginEdit.getText().toString();
+                String senha = senhaEdit.getText().toString();
 
-                finish();
+                // Verificação simples
+                if (login.equals("adm") && senha.equals("adm")) {
+                    Intent intent = new Intent(FormLogin.this, FormHome.class);
+                    startActivity(intent);
+                    finish();
+                } else {
+                    Toast.makeText(FormLogin.this, "Login ou senha inválidos", Toast.LENGTH_SHORT).show();
+                }
             }
-        });
-    }
+  });
+}
 }
