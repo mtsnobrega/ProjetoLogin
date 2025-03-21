@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         applicationId = "com.meumts.projetologin"
-        minSdk = 21
+        minSdk = 31
         targetSdk = 35
         versionCode = 1
         versionName = "1.0"
@@ -27,8 +27,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
 }
 
@@ -39,8 +39,25 @@ dependencies {
     implementation(libs.activity)
     implementation(libs.constraintlayout)
     implementation(libs.firebase.common)
+    implementation(libs.credentials)
+    implementation(libs.credentials.play.services.auth)
+    implementation(libs.googleid)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
-    implementation(libs.firebase.bom)
+
+    implementation(platform(libs.firebase.bom))
+    implementation(libs.google.firebase.auth)
+
+    implementation(libs.credentials.v130)
+    implementation(libs.credentials.play.services.auth.v130)
+    implementation(libs.googleid)
+    implementation(libs.credentials.v120alpha04)
+
+
+
+
+
+
+
 }

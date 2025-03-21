@@ -12,7 +12,20 @@
           "package_name": "com.meumts.projetologin"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "478900904211-9vi2nh3cv460dk41s77qlebhu8ecpv3q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.meumts.projetologin",
+            "certificate_hash": "38455ba1fdb34d28c74e1a416b52ae5f52f9b051"
+          }
+        },
+        {
+          "client_id": "478900904211-06210cu970ih2h3q1asia44lpf5abl28.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyB2KFMtYcTxL-aNPh7jxtIuCjrDzwguDwg"
@@ -20,7 +33,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "478900904211-06210cu970ih2h3q1asia44lpf5abl28.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }
