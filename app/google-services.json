@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "478900904211",
+    "project_id": "projeto-booknote",
+    "storage_bucket": "projeto-booknote.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:478900904211:android:090bf03703cd9f472f7ae6",
+        "android_client_info": {
+          "package_name": "com.meumts.projetologin"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB2KFMtYcTxL-aNPh7jxtIuCjrDzwguDwg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

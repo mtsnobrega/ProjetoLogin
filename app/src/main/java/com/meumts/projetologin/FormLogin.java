@@ -10,6 +10,8 @@ import androidx.appcompat.widget.AppCompatButton;
 import androidx.core.content.ContextCompat;
 import android.os.Build;
 
+import com.google.firebase.Firebase;
+
 public class FormLogin extends AppCompatActivity {
 
 
@@ -23,10 +25,12 @@ public class FormLogin extends AppCompatActivity {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             // Altera a cor da status bar para a cor definida em colors.xml
             getWindow().setStatusBarColor(ContextCompat.getColor(this, R.color.black));
+
         }
 
 
-        // Referências diretas para os EditText
+
+    // Referências diretas para os EditText
         EditText loginEdit = findViewById(R.id.ConteinerItensLogin);
         EditText senhaEdit = findViewById(R.id.ConteinerItensSenha);
         AppCompatButton loginButton = findViewById(R.id.btn2);
